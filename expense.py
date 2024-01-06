@@ -17,14 +17,19 @@ mysql = MySQL(app)
 
 @app.route("/budgetmate/login", methods=['GET','POST'])
 def login():
-    msg = ''
+    
     return render_template("loginpage.html")
 
 @app.route("/budgetmate/register", methods=['GET','POST'])
 def register():
-    msg = ''
+    if request.method == "POST" and request.form["email"] != None and request.form["password"] != None:
+        firstName = request.form["firstname"]
+        lastName = request.form["lastname"]
+        emailAddress = request.form["email"]
+        password = request.form["password"]
+    
+        return render_template("register.html")
     return render_template("register.html")
-
 
 
 
