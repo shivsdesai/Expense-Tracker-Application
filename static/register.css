@@ -82,3 +82,7 @@ body {
 .registration-link p a:hover {
   text-decoration: underline;
 }
+
+#message {
+  color: black;
+}

@@ -9,16 +9,16 @@
 
 <body>
 	<div class="login">
-		<form action="">
+		<form action="{{ url_for('login') }}" method="post">
  			<h1>Login</h1>
             <div class="input-box">
-            	<input type="text" placeholder="emailid" required>
+            	<input type="text" name="email" placeholder="emailid" required>
                 <i class='bx bxs-user-circle'></i>
             </div>
            
  			<div class="input-box">
                 
-            	<input type="password" placeholder="Password" required>
+            	<input type="password" name="password" placeholder="Password" required>
                 <i class='bx bxs-lock-alt' ></i>
             </div>
             <div class="remember-forgot">
@@ -27,8 +27,9 @@
             </div>
             
             <button type="submit" class="button">Login</button>
-            
+            <span id="message"> {{msg}} </span>
             <div class="registration-link">
+    
             <p>Dont have account? <a href="register">Register</a></p>
             
 </body>
